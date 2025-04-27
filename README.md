@@ -1,6 +1,8 @@
 # Opulent-Space
 This project is about Interior Designing E-Commerce Website.
 
+I have merged html, css and javascript in .php file. So, I have also uploaded separate html, css, and javascript too.
+
 SOFTWARE REQUIREMENTS:-
 Front End (For coding)     :       Visual studio code 201
 Operating system           :       Windows 11                 
