@@ -1,0 +1,186 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Background color for the entire page */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Header */
+.banner {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.banner .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.banner .navbar img.logo {
+    width: 100px;
+}
+
+.banner nav ul {
+    list-style: none;
+}
+
+.banner nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.banner nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Quote Form */
+.quote-form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Services Section */
+.services {
+    background-color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1 1 300px;
+    margin: 0 1rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.service-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-top img {
+    width: 100px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1 1 300px;
+    margin-right: 2rem;
+}
+
+.footer-column h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+}
+
+/* Form submission message */
+#subm {
+    margin-top: 1rem;
+    color: #333;
+    font-weight: bold;
+}

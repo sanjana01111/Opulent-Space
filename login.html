@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("C:/xampp/htdocs/Opulent Space/images/login3.jpeg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: rgb(249, 246, 246);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .toggle-link {
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>Login and Signup Form</title>
+</head>
+<body>
+    <div class="login-container" id="loginFormContainer">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="validateLoginForm(); return false;">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Not signed up? <span class="toggle-link" onclick="toggleForms('signup')">Sign Up</span></p>
+    </div>
+
+    <div class="login-container" id="signupFormContainer" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signupForm" onsubmit="validateSignupForm(); return false;">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+            </div>
+
+            <div class="form-group">
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already signed up? <span class="toggle-link" onclick="toggleForms('login')">Sign In</span></p>
+    </div>
+
+    <script>
+        function validateLoginForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Basic validation - check if the fields are not empty
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Username and password are required!");
+            } else {
+                // Add your authentication logic here (e.g., check against a database)
+                alert("Login successful!"); // Replace this with your actual login logic
+            }
+        }
+
+        function validateSignupForm() {
+            var fullName = document.getElementById("fullName").value;
+            var newUsername = document.getElementById("newUsername").value;
+            var newPassword = document.getElementById("newPassword").value;
+            var emailOrMobile = document.getElementById("email").value;
+
+            // Basic validation - check if the fields are not empty
+            if (fullName.trim() === "" || newUsername.trim() === "" || newPassword.trim() === "" || emailOrMobile.trim() === "") {
+                alert("All fields are required!");
+            } else {
+                // Add your registration logic here (e.g., store in a database)
+                alert("Registration successful!"); // Replace this with your actual registration logic
+                // You might want to redirect the user to the login form after successful registration
+                toggleForms('login');
+            }
+        }
+
+        function toggleForms(formToShow) {
+            if (formToShow === 'signup') {
+                document.getElementById("loginFormContainer").style.display = "none";
+                document.getElementById("signupFormContainer").style.display = "block";
+            } else if (formToShow === 'login') {
+                document.getElementById("loginFormContainer").style.display = "block";
+                document.getElementById("signupFormContainer").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

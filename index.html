@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opulent Space: Best Interior Design Solutions for your Home | Get Free Quotes</title>
+    <link rel="stylesheet" href="index_style.css">
+    <style>
+        /* Modal CSS styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        /* Add color to the button */
+        .modal-content button {
+            background-color: #4caf50; /* Green background color */
+            color: white; /* Text color */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #45a049; /* Darker green background color on hover */
+        }
+
+
+        .modal-content {
+            background-color: #fefefed3;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <img onclick="btn('index.html');" src="C:\xampp\htdocs\Opulent Space\images\finallogo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="design.html">Designs</a></li>
+                <li><a href="#" onclick="openModal()">Login</a></li> <!-- Modified -->
+                <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2>Login Options</h2>
+                        <button onclick="window.location.href='adminlogin.php'">Admin Login</button>
+                        <button onclick="window.location.href='login.html'">Customer Login</button>
+                    </div>
+                </div>
+                <li><a href="book.html">Customize</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Edge & Elegance</h1>
+            <p>Happy new home, where adventures and memories await.</p>
+        </div>
+
+
+    </div>
+
+    <div class="up" onclick="totop();">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <div class="m2">
+        <div class="t2">
+            <h1>One-stop shop for all things home interiors</h1>
+            <p>Welcome to a world where imagination takes shape, and spaces become canvases for self-expression. Embark on a captivating journey with our website, 'OpulentSpace’, where the art of interior design unfolds before your eyes. In this digital sanctuary, we invite you to explore the boundless possibilities of transforming your living spaces into refined reflections of your unique style.</p>
+        </div>
+        <div class="d2">
+            <div>
+                <img src="C:\xampp\htdocs\Opulent Space\images\h22.jpg">
+                <h2>Living Room</h2>
+                <p>Get the complete home interior experience with award-winning designers, service partners, and the best brands.</p>
+                <p onclick="btn('');" class="rd">Let's tell you more →</p>
+            </div>
+            <div>
+                <img src="C:\xampp\htdocs\Opulent Space\images\h21.jpg">
+                <h2>Kitchen</h2>
+                <p>Choose high quality, budget-friendly modular solutions like kitchens, wardrobes, TV units, and more in your favourite colours, sizes, and designs.</p>
+                <p onclick="btn('show.html?topic=kitchen');" class="rd">Let's tell you more →</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="m4">
+        <div class="t4">
+            <h1>Our Achievements</h1>
+        </div>
+        <div class="d4">
+            <div><img src="C:\xampp\htdocs\Opulent Space\images\h2.jpg"><h3>2 homes delivered every hour</h3></div>
+            <div><img src="C:\xampp\htdocs\Opulent Space\images\h5.jpg"><h3>1,500+ expert designers</h3></div>
+            <div><img src="C:\xampp\htdocs\Opulent Space\images\h8.jpg"><h3>2.5 lakh+ catalogue products</h3></div>
+            <div><img src="C:\xampp\htdocs\Opulent Space\images\h7.jpg"><h3>21 cities</h3></div>
+        </div>
+    </div>
+
+    <div class="m6">
+        <div class="t6">
+            <h1>Design Home In Just 5 Simple steps</h1>
+        </div>
+        <div class="d6">
+            <img src="C:\xampp\htdocs\Opulent Space\images\mdd.jpg" usemap="#img-mp">
+            <div id="img-bk" style="width: 65px;"></div>
+        </div>
+        <div class="d6-2">
+            <h1 id="d6-2-h1">Meet designer</h1>
+            <p id="d6-2-p">Let's get to know you better and we'll share design concepts and a quote</p>
+        </div>
+        <div class="d6-3">
+            <div class="slider">
+                <div class="slide">
+                    <!-- adding images -->
+                    <div class="imgs f" id="cls-f">
+                        <img src="C:\xampp\htdocs\Opulent Space\images\md1.jpg" width="600" height="550">
+                    </div>
+                    <div class="imgs">
+                        <img src="C:\xampp\htdocs\Opulent Space\images\md2.jpg" width="600" height="550">
+                    </div>
+                    <div class="imgs">
+                        <img src="C:\xampp\htdocs\Opulent Space\images\md3.jpg" width="600" height="550">
+                    </div>
+                    <div class="imgs">
+                        <img src="C:\xampp\htdocs\Opulent Space\images\md4.jpg" width="600" height="550">
+                    </div>
+                    <div class="imgs">
+                        <img src="C:\xampp\htdocs\Opulent Space\images\md5.jpg" width="600" height="550">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <map name="img-mp">
+        <area shape="circle" coords="32,75,36" id="ara1" onclick="clk1();">
+        <area shape="circle" coords="142,75,36" id="ara2" onclick="clk2();">
+        <area shape="circle" coords="252,75,36" id="ara3" onclick="clk3();">
+        <area shape="circle" coords="362,75,36" id="ara4" onclick="clk4();">
+        <area shape="circle" coords="472,75,36" id="ara5" onclick="clk5();">
+      </map>
+
+      <div class="m-last">
+        <div class="last">
+            <div>
+                <h1>Your dream home is just a click away</h1>
+                <h1>GET STARTED</h1>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="ftr-m">
+            <div class="ftr-t">
+                <img src="C:\xampp\htdocs\Opulant Space\source\Opulent_Space_Logo.png">
+                <ul>
+                    <li><a target="_blank" href="https://api.whatsapp.com/send/?phone=+918879109025&text=Hey There! I am interested in interior designs on website. Can I know more on this?"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/meetpatel_2801/"><i class="fab fa-instagram"></i></i></a></li>
+                </ul>
+            </div>
+            <div class="ftr-d">
+                <div>
+                    <h3>Design ideas</h3>
+                    <ul>
+                        <li><a href="livingroom.html?topic=living-room">Living Rooms</a></li>
+                        <li><a href="kitchen.html?topic=kitchen">Kitchens</a></li>
+                        <li><a href="masterbedroom.html?topic=masterbedroom">Master Bedrooms</a></li>
+                        <li><a href="kidsbedroom.html?topic=kidsbedroom">Kids Bedrooms</a></li>
+                    </ul>
+                </div>
+               <div>
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="design.html">Designs</a></li>
+                        <li><a href="book.html">Meet Designer</a></li>
+                         <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div><div>
+                    <h3>Get in touch</h3>
+                    <ul>
+                        <li>Call us</li>
+                        <a href="tel:1234567890">+91 1234567890</a>
+                        <li>Email us</li>
+                        <a href="mailto:opulentspace01@gmail.com">opulentspace01@gmail.com</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="ftr-b">
+                <h2>Designed By SNAV</h2>
+                <p>© 2024 Opulent Space.com | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to open and close modal
+        function openModal() {
+            document.getElementById("loginModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            var modal = document.getElementById("loginModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

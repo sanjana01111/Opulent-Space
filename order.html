@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order_style.css">
+    <title>Opulent Space Order Payment Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Opulent Space Order Payment Form</h1>
+        <form id="paymentForm">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phoneno">Phone number:</label>
+            <input type="phoneno" id="phoneno" name="phoneno" required>
+
+            <!-- Expanded Address Section -->
+            <label for="addressLine1">Address Line 1:</label>
+            <input type="text" id="addressLine1" name="addressLine1" required>
+
+            <label for="addressLine2">Address Line 2:</label>
+            <input type="text" id="addressLine2" name="addressLine2">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="Select">--Select--</option>
+                <option value="state1">State 1</option>
+                <option value="state2">State 2</option>
+                <!-- Add more states as needed -->
+            </select>
+
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" pattern="[0-9]{6}" title="Please enter a valid 6-digit zip code" required>
+
+            <!-- Payment Options -->
+            <label for="paymentOptions">Payment Options:</label>
+            <select id="paymentOptions" name="paymentOptions" onchange="togglePaymentMethod()">
+                <option value="Select">--Select--</option>
+                <option value="cashOnDelivery">Cash on Delivery</option>
+                <option value="fullPayment">Full Payment</option>
+                <option value="installment">Installment</option>
+            </select>
+
+            <div id="fullInstallmentOptions" style="display: none;">
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" onchange="togglePaymentDetails()">
+                    <option value="Select">--Select--</option>
+                    <option value="upi">UPI</option>
+                    <option value="card">Card</option>
+                </select>
+
+                <div id="upiQRCode" style="display: none;"><center>
+                    <!-- Replace the source with your UPI QR Code -->
+                    <img src="C:\xampp\htdocs\Opulent Space\images\upi.jpeg" alt="UPI QR Code" width="400" height="400"></center>
+                </div>
+
+                <div id="cardDetails" style="display: none;">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script src="order_code.js"></script>
+
+    <script>
+        function togglePaymentMethod() {
+            var paymentOptions = document.getElementById("paymentOptions");
+            var fullInstallmentOptions = document.getElementById("fullInstallmentOptions");
+            var paymentMethod = document.getElementById("paymentMethod");
+
+            if (paymentOptions.value === "fullPayment" || paymentOptions.value === "installment") {
+                fullInstallmentOptions.style.display = "block";
+            } else {
+                fullInstallmentOptions.style.display = "none";
+                resetPaymentDetails();
+            }
+        }
+
+        function togglePaymentDetails() {
+            var paymentMethod = document.getElementById("paymentMethod");
+            var upiQRCode = document.getElementById("upiQRCode");
+            var cardDetails = document.getElementById("cardDetails");
+
+            if (paymentMethod.value === "upi") {
+                upiQRCode.style.display = "block";
+                cardDetails.style.display = "none";
+            } else if (paymentMethod.value === "card") {
+                upiQRCode.style.display = "none";
+                cardDetails.style.display = "block";
+            } else {
+                resetPaymentDetails();
+            }
+        }
+
+        function resetPaymentDetails() {
+            var upiQRCode = document.getElementById("upiQRCode");
+            var cardDetails = document.getElementById("cardDetails");
+
+            upiQRCode.style.display = "none";
+            cardDetails.style.display = "none";
+        }
+
+        function submitForm() {
+            // Add your form submission logic here
+            alert("Form submitted successfully!");
+        }
+    </script>
+</body>
+</html>
